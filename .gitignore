@@ -1,0 +1,29 @@
+# Ignore Python virtual environment files
+venv/
+env/
+ENV/
+
+# Ignore pipenv files
+Pipfile
+Pipfile.lock
+
+# Ignore local development server files
+*.pyc
+__pycache__/
+
+# Ignore IDE-specific files and directories
+.vscode/
+.idea/
+
+# Ignore logs
+*.log
+
+# Ignore miscellaneous files and directories
+.DS_Store
+*.swp
+*.swo
+
+
+# igonore miscallaneous files
+vitualone
+tableRelationships.sql
