@@ -2,6 +2,7 @@ from flask import Flask, render_template, url_for, request, redirect
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 app = Flask('__main__')
+# use the uri for your database below is an example of a mysql uri you can export it to enviroment variables and import it here
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:password@localhost:3306/flask_task_manager'
 
 db = SQLAlchemy(app)
@@ -38,7 +39,7 @@ def index():
 
 @app.route('/delete/<int:id>')
 def delete(id):
-    # get the task to delete from the database using it id
+    # get the task to delete from the database using its id
     task_to_delete = Todo.query.get_or_404(id)
 
     try:  # using session.delete passing it the task queried above and commiting to the database and the redirecting to root to view all remaining tasks
